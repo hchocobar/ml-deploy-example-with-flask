@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.7/dist/superhero/bootstrap.min.css">
+    <title>Iris - Model prediction</title>
+</head>
+<body>
+    <div class="container text-center mt-5">
+        <h1>Iris: Model prediction</h1>
+        {% if prediction != None %}
+        <div class="alert alert-primary my-2" role="alert">
+            <h3>Prediction: {{ prediction }}</h3>
+        </div>
+        <h2 class="mt-3">Introduce the values</h2>
+        {% endif %}
+        <div class="row mt-5">
+                <form action="/" method="post" class="m-auto col-11 col-sm-8 col-md-8 col-lg-6">
+                      <div class="row mb-3">
+                        <label for="petalWidth" class="col-sm-4 col-form-label">Petal width</label>
+                        <div class="col-sm-8">
+                          <input class="form-control" id="petalWidth" type="number" step="any" name="val1" required>
+                        </div>
+                      </div>
+                      <div class="row mb-3">
+                        <label for="petalLength" class="col-sm-4 col-form-label">Petal length</label>
+                        <div class="col-sm-8">
+                          <input class="form-control" id="petalLength" type="number" step="any" name="val2" required>
+                        </div>
+                      </div>
+                      <div class="row mb-3">
+                        <label for="sepalWidth" class="col-sm-4 col-form-label">Sepal width</label>
+                        <div class="col-sm-8">
+                          <input class="form-control" id="sepalWidth" type="number" step="any" name="val3" required>
+                        </div>
+                      </div>
+                      <div class="row mb-3">
+                        <label for="setalLength" class="col-sm-4 col-form-label">Sepal length</label>
+                        <div class="col-sm-8">
+                          <input class="form-control" id="setalLength" type="number" step="any" name="val4" required>
+                        </div>
+                      </div>
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                      <button class="btn btn-lg btn-primary me-md-2" type="submit" value="Predict">Predict</button>
+                      <button class="btn btn-lg btn-secondary" type="reset">Reset</button>
+                    </div>
+                </form>
+        </div>
+    </div>
+</body>
+</html>

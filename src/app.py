@@ -6,7 +6,7 @@ from pickle import load
 app = Flask(__name__)
 
 
-model = load(open('../models/iris-decision-tree-classifier-default-18.pkl', 'rb'))
+model = load(open('iris-decision-tree-classifier-default-18.pkl', 'rb'))
 class_dict = {"0": "Iris setosa",
               "1": "Iris versicolor",
               "2": "Iris virginica"}
